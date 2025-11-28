@@ -72,31 +72,56 @@
   }
 
   /* A gombok ALAP stílusa – itt van a méret, forma, szín! */
-  .social-btn {
-    width: 70px;
-    height: 70px;
-    border-radius: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    color: #ffffff;        /* betű színe */
-    background: #c20000;   /* piros háttér */
-    border: 2px solid #c20000;
-    transition: 0.2s;
-  }
-
-	.social-btn:hover,
-	.social-btn:active {
-	transform: scale(1.12);
-	box-shadow:
-		0 0 10px rgba(194, 0, 0, 0.6),
-		0 0 25px rgba(194, 0, 0, 0.8),
-		0 0 40px rgba(194, 0, 0, 1);
-	filter: brightness(1.15);
+  /* A gombok ALAP stílusa – itt van a méret, forma, szín + pulzálás */
+.social-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;        /* betű színe */
+  background: #c20000;   /* piros háttér */
+  border: 2px solid #c20000;
+  transition: 0.2s;
+  animation: pulseRed 2.5s infinite;  /* PULZÁLÁS */
 }
+
+/* Hover + érintés effekt */
+.social-btn:hover,
+.social-btn:active {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 10px rgba(194, 0, 0, 0.6),
+    0 0 25px rgba(194, 0, 0, 0.8),
+    0 0 40px rgba(194, 0, 0, 1);
+  filter: brightness(1.15);
+}
+
+/* Kattintáskor "pattanó" effekt */
+.social-btn:active {
+  transform: scale(0.92);
+  box-shadow: 0 0 5px rgba(194, 0, 0, 0.5);
+}
+
+/* Finom folyamatos pulzálás */
+@keyframes pulseRed {
+  0% {
+    box-shadow: 0 0 5px rgba(194, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 12px rgba(194, 0, 0, 0.7),
+      0 0 25px rgba(194, 0, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(194, 0, 0, 0.4);
+  }
+}
+
 
 
   /* Ha később akarod, hogy más színű legyen valamelyik,
