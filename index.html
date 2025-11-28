@@ -4,75 +4,101 @@
   <meta charset="UTF-8">
   <title>Partizan Security - Elérhetőségek</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 🔴 KÜLSŐ KERET – RENDŐRSÉGI VILLOGÁS */
+.card {
+  background: #111;
+  border-radius: 24px;
+  padding: 32px 24px 40px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+  border: 3px solid #7a0000;
+  animation: policeFlash 1.2s infinite;
+}
+
+@keyframes policeFlash {
+  0% {
+    box-shadow:
+      0 0 5px rgba(194, 0, 0, 0.3),
+      0 0 15px rgba(194, 0, 0, 0.4);
+    border-color: #7a0000;
   }
 
-  body {
-    min-height: 100vh;
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  50% {
+    box-shadow:
+      0 0 15px rgba(255, 0, 0, 0.7),
+      0 0 35px rgba(255, 0, 0, 1);
+    border-color: #ff0000;
   }
 
-  .card {
-    background: #111;
-    border-radius: 24px;
-    padding: 32px 24px 40px;
-    max-width: 420px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    border: 2px solid #c20000; /* piros keret */
+  100% {
+    box-shadow:
+      0 0 5px rgba(194, 0, 0, 0.3),
+      0 0 15px rgba(194, 0, 0, 0.4);
+    border-color: #7a0000;
   }
+}
 
-  .logo {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 20px;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 3px solid #c20000; /* piros keret a logó körül */
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+/* LOGÓ */
+.logo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid #c20000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-  h1 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: #fff;
-  }
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
 
-  p {
-    font-size: 0.9rem;
-    color: #aaa;
-    margin-bottom: 24px;
-  }
+p {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 24px;
+}
 
-  .socials {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    margin-top: 10px;
-  }
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
 
-  /* A gombok ALAP stílusa – itt van a méret, forma, szín! */
-  /* A gombok ALAP stílusa – itt van a méret, forma, szín + pulzálás */
+/* 🔴 GOMBOK ALAP + PULZÁLÁS */
 .social-btn {
   width: 70px;
   height: 70px;
@@ -83,14 +109,14 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
-  color: #ffffff;        /* betű színe */
-  background: #c20000;   /* piros háttér */
+  color: #ffffff;
+  background: #c20000;
   border: 2px solid #c20000;
   transition: 0.2s;
-  animation: pulseRed 2.5s infinite;  /* PULZÁLÁS */
+  animation: pulseRed 2.5s infinite;
 }
 
-/* Hover + érintés effekt */
+/* HOVER + ÉRINTÉS */
 .social-btn:hover,
 .social-btn:active {
   transform: scale(1.12);
@@ -101,13 +127,13 @@
   filter: brightness(1.15);
 }
 
-/* Kattintáskor "pattanó" effekt */
+/* KATTINTÁS "PATTANÁS" */
 .social-btn:active {
   transform: scale(0.92);
   box-shadow: 0 0 5px rgba(194, 0, 0, 0.5);
 }
 
-/* Finom folyamatos pulzálás */
+/* PULZÁLÁS ANIMÁCIÓ */
 @keyframes pulseRed {
   0% {
     box-shadow: 0 0 5px rgba(194, 0, 0, 0.4);
@@ -121,39 +147,28 @@
     box-shadow: 0 0 5px rgba(194, 0, 0, 0.4);
   }
 }
-
-
-
-  /* Ha később akarod, hogy más színű legyen valamelyik,
-     ide lehet külön módosítást írni, de most mind piros: */
-  .fb {}
-  .ig {}
-  .tt {}
 </style>
 
 </head>
+
 <body>
-  <div class="card">
 
-    <!-- LOGÓ -->
-    <div class="logo">
-      <img src="logo.png" alt="Partizan Security logó">
-    </div>
+<div class="card">
 
-    <h1>Partizan Security</h1>
-    <p>Kattints a kívánt platformra</p>
-
-    <div class="socials">
-      <!-- FACEBOOK -->
-      <a class="social-btn fb" href="https://www.facebook.com/share/1BfYxNqLy7/" target="_blank">F</a>
-
-      <!-- INSTAGRAM -->
-      <a class="social-btn ig" href="https://instagram.com/norby.987" target="_blank">IG</a>
-
-      <!-- TIKTOK -->
-      <a class="social-btn tt" href="https://www.tiktok.com/@norby9898" target="_blank">TT</a>
-    </div>
-
+  <div class="logo">
+    <img src="logo.png" alt="Partizan Security logó">
   </div>
+
+  <h1>Partizan Security</h1>
+  <p>Kattints a kívánt platformra</p>
+
+  <div class="socials">
+    <a class="social-btn" href="https://www.facebook.com/share/1BfYxNqLy7/" target="_blank">F</a>
+    <a class="social-btn" href="https://instagram.com/norby.987" target="_blank">IG</a>
+    <a class="social-btn" href="https://www.tiktok.com/@norby9898" target="_blank">TT</a>
+  </div>
+
+</div>
+
 </body>
 </html>
