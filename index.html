@@ -10,7 +10,6 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-
 <style>
 * {
   box-sizing: border-box;
@@ -29,7 +28,7 @@ body {
   padding: 20px;
 }
 
-/* 🔴 KÜLSŐ KERET – RENDŐRSÉGI VILLOGÁS */
+/* 🔴 KÜLSŐ KERET – VILLOGÁS */
 .card {
   background: #111;
   border-radius: 24px;
@@ -49,14 +48,12 @@ body {
       0 0 15px rgba(194, 0, 0, 0.4);
     border-color: #7a0000;
   }
-
   50% {
     box-shadow:
       0 0 15px rgba(255, 0, 0, 0.7),
       0 0 35px rgba(255, 0, 0, 1);
     border-color: #ff0000;
   }
-
   100% {
     box-shadow:
       0 0 5px rgba(194, 0, 0, 0.3),
@@ -88,7 +85,6 @@ body {
 h1 {
   font-size: 1.5rem;
   margin-bottom: 8px;
-  color: #fff;
 }
 
 p {
@@ -102,9 +98,10 @@ p {
   justify-content: center;
   gap: 18px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
-/* 🔴 GOMBOK ALAP + PULZÁLÁS */
+/* 🔴 MINDEN GOMB EGYFORMA */
 .social-btn {
   width: 70px;
   height: 70px;
@@ -114,7 +111,7 @@ p {
   justify-content: center;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   color: #ffffff;
   background: #c20000;
   border: 2px solid #c20000;
@@ -133,28 +130,23 @@ p {
   filter: brightness(1.15);
 }
 
-/* KATTINTÁS "PATTANÁS" */
+/* KATTINTÁS */
 .social-btn:active {
   transform: scale(0.92);
   box-shadow: 0 0 5px rgba(194, 0, 0, 0.5);
 }
 
-/* PULZÁLÁS ANIMÁCIÓ */
+/* PULZÁLÁS */
 @keyframes pulseRed {
-  0% {
-    box-shadow: 0 0 5px rgba(194, 0, 0, 0.4);
-  }
+  0% { box-shadow: 0 0 5px rgba(194, 0, 0, 0.4); }
   50% {
     box-shadow:
       0 0 12px rgba(194, 0, 0, 0.7),
       0 0 25px rgba(194, 0, 0, 0.9);
   }
-  100% {
-    box-shadow: 0 0 5px rgba(194, 0, 0, 0.4);
-  }
+  100% { box-shadow: 0 0 5px rgba(194, 0, 0, 0.4); }
 }
 </style>
-
 </head>
 
 <body>
@@ -169,9 +161,22 @@ p {
   <p>Kattints a kívánt platformra</p>
 
   <div class="socials">
+
+    <!-- FACEBOOK -->
     <a class="social-btn" href="https://www.facebook.com/share/1BfYxNqLy7/" target="_blank">F</a>
+
+    <!-- INSTAGRAM -->
     <a class="social-btn" href="https://instagram.com/norby.987" target="_blank">IG</a>
+
+    <!-- TIKTOK -->
     <a class="social-btn" href="https://www.tiktok.com/@norby9898" target="_blank">TT</a>
+
+    <!-- TELEFON -->
+    <a class="social-btn" href="tel:0745326270">📞</a>
+
+    <!-- WEBOLDAL -->
+    <a class="social-btn" href="https://www.partizansecuritz.ro/" target="_blank">🌐</a>
+
   </div>
 
 </div>
